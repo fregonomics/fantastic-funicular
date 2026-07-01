@@ -1,0 +1,25 @@
+# What name would you like to give to the workflow
+name: hello-world
+
+# what should trigger the event
+on: 
+  push:
+  schedule:
+    - cron: "*/5 * * * *"
+
+# Each workflow has a job with executable steps
+jobs:
+  # name of the job (can be anything)
+  hello-world-job:
+
+    # Can be self-hosted or github hosted runner
+    runs-on: ubuntu-latest
+
+    # each job has a step which has a script it can run or run in action
+    steps:
+      # name given to a step
+      - name: checkout the repository code
+        # this is an action available at the marketplace
+        uses: actions/checkout@v7
+      # runs a echo command on push trigger
+      - run: echo "$(cat hello_world.txt)"
