@@ -4,8 +4,8 @@ name: hello-world
 # what should trigger the event
 on: 
   push:
-  schedule:
-    - cron: "*/5 * * * *"
+  #schedule:
+    #- cron: "*/5 * * * *"
 
 # Each workflow has a job with executable steps
 jobs:
