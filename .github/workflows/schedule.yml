@@ -6,6 +6,7 @@ on:
   push:
   #schedule:
     #- cron: "*/5 * * * *"
+  workflow_dispatch: #manual trigger of workflow
 
 # Each workflow has a job with executable steps
 jobs:
